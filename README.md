@@ -141,7 +141,7 @@ $ python 04_predict.py -d data/animal -m models/model.hdf5
 ### 6. 개정이력(Release note)
 -----
 [(목차로 이동)](#목-차) 
-#### 2020.11.02 
+#### 2020.11.03 
 - v1.0 등록 및 배포
 #### 2020.11.20 
 - 처리속도 개선(v1.1) : pandas 연산부분을 numpy로 대체
