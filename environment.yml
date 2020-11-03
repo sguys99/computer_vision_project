@@ -1,0 +1,14 @@
+name: computer_vision_project
+
+dependencies:
+  - python==3.6
+  - sklearn
+  - numpy
+  - pip
+  - matplotlib
+  - opencv
+  - cudnn
+  - cudatoolkit==10.1
+  - pip:
+    - tensorflow-gpu==2.2
+    - imutils
