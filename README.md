@@ -95,7 +95,7 @@ $ pip install -r requirements.txt
 [(목차로 이동)](#목-차) 
 
 #### 데이터 준비
-캐글(Kaggle) `Animal Image Dataset(Dog, Cat and Panda` 데이터셋을 다운로드한다.[[download link]](https://www.kaggle.com/ashishsaxena2209/animal-image-datasetdog-cat-and-panda)  
+캐글(Kaggle) `Animal Image Dataset(Dog, Cat and Panda)` 데이터셋을 다운로드한다.[[download link]](https://www.kaggle.com/ashishsaxena2209/animal-image-datasetdog-cat-and-panda)  
 다운로드한 데이터는 `src/data/` 경로에 저장한다. 데이터셋 폴더 구조는 다음과 같이 설정한다.
 ```
 └── src/
