@@ -99,10 +99,10 @@ $ pip install -r requirements.txt
 다운로드한 데이터는 `src/data/` 경로에 저장한다. 데이터셋 폴더 구조는 다음과 같이 설정한다.
 ```
 └── src/
-    └── data/
-         ├── cats/
-         ├── dogs/
-         └── panda/
+    └── data/animals
+              ├── cats/
+              ├── dogs/
+              └── panda/
 ```
 #### 데이터 전처리
 해당사항 없음(모델 학습 과정에서 진행)
@@ -119,9 +119,9 @@ arguments
 ```
 
 예 시:  
-데이터셋이 `data/animal/` 경로에 저장되어 있고, 학습된 모델과 학습결과를 각각  `models/model.hdf5`, `/outputs/output.png` 경로에 저장하고자 할때 다음과 같이 입력한다.  
+데이터셋이 `data/animals/` 경로에 저장되어 있고, 학습된 모델과 학습결과를 각각  `models/model.hdf5`, `/outputs/output.png` 경로에 저장하고자 할때 다음과 같이 입력한다.  
 ```
-$ python 03_train.py -d data/animal -m models/model.hdf5 -o ouputs.png
+$ python 03_train.py -d data/animals -m models/model.hdf5 -o ouputs.png
 ```
 #### 모델 예측
 데이터셋에서 10장의 이미지를 랜덤 추출하여 분류 동작을 수행한다. 
@@ -133,9 +133,9 @@ arguments
   -m, --model   :   path to pre-trained model(weights). required
 ```
 예 시:
-데이터셋과 학습된 모델이 각각 `data/animal/`, `models/model.hdf5` 경로에 저장되어 있을 때 다음과 같이 입력한다.  
+데이터셋과 학습된 모델이 각각 `data/animals/`, `models/model.hdf5` 경로에 저장되어 있을 때 다음과 같이 입력한다.  
 ```
-$ python 04_predict.py -d data/animal -m models/model.hdf5
+$ python 04_predict.py -d data/animals -m models/model.hdf5
 ```
 
 ### 6. 개정이력(Release note)
