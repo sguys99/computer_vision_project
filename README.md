@@ -7,25 +7,25 @@
 ![release](https://img.shields.io/badge/release-v1.0-blue) ![last commit](https://img.shields.io/badge/last%20commit-20%2F11%2F03-yellowgreen) ![status](https://img.shields.io/badge/status-completed-lightgrey)
 
 <!--과제 수행범위 추가영역-->
-[x] 데이터 수집
-[x] 데이터 전처리
-[x] 데이터 분석 및 시각화
-[x] 모델링 및 튜닝
-[ ] 모델 배포
+- [x] 데이터 수집
+- [x] 데이터 전처리
+- [x] 데이터 분석 및 시각화
+- [x] 모델링 및 튜닝
+- [ ] 모델 배포
 
 
 ## 목 차(Table of contents)  
-[1. 개 요(Abstract)](#1-개-요abstract)
-[2. 요구사양(Requirements)](#2-요구사양requirements)
-[3. 설치 방법(Installation)](#3-설치-방법installation)
-[4. 프로젝트 구성(Project structure)](#4-프로젝트-구성project-structure)
-[5. 사용방법(Usage examle)](#5-사용방법usage-examle)
-  - [데이터 준비](#데이터-준비)
-  - [데이터 전처리](#데이터-전처리)
-  - [모델 학습](#모델-학습)
-  - [모델 예측](#모델-예측)
-[6. 개정이력(Release note)](#6-개정이력release-note)
-[7. 참여 직원(Contributors)](#7-참여-직원contributors)
+[1. 개 요(Abstract)](#1-개-요abstract)  
+[2. 요구사양(Requirements)](#2-요구사양requirements)  
+[3. 설치 방법(Installation)](#3-설치-방법installation)  
+[4. 프로젝트 구성(Project structure)](#4-프로젝트-구성project-structure)  
+[5. 사용방법(Usage examle)](#5-사용방법usage-examle)  
+  - [데이터 준비](#데이터-준비)  
+  - [데이터 전처리](#데이터-전처리)  
+  - [모델 학습](#모델-학습)  
+  - [모델 예측](#모델-예측)  
+[6. 개정이력(Release note)](#6-개정이력release-note)  
+[7. 참여 직원(Contributors)](#7-참여-직원contributors)  
 
 
 ## 1. 개 요(Abstract)
@@ -92,14 +92,15 @@ $ pip install -r requirements.txt
 [(목차로 이동)](#1-개-요abstract)  
 
 #### 데이터 준비
-캐글(Kaggle) `Animal Image Dataset(Dog, Cat and Panda` 데이터셋을 다운로드한다.[[download link]](https://www.kaggle.com/ashishsaxena2209/animal-image-datasetdog-cat-and-panda)  
+캐글(Kaggle) `Animal Image Dataset(Dog, Cat and Panda)` 데이터셋을 다운로드한다.[[download link]](https://www.kaggle.com/ashishsaxena2209/animal-image-datasetdog-cat-and-panda)  
 다운로드한 데이터는 `src/data/` 경로에 저장한다. 데이터셋 폴더 구조는 다음과 같이 설정한다.
 ```
 └── src/
     └── data/
-         ├── cats/
-         ├── dogs/
-         └── panda/
+         └── animals
+              ├── cats/
+              ├── dogs/
+              └── panda/
 ```
 #### 데이터 전처리
 해당사항 없음(모델 학습 과정에서 진행)
@@ -116,9 +117,9 @@ arguments
 ```
 
 예 시:  
-데이터셋이 `data/animal/` 경로에 저장되어 있고, 학습된 모델과 학습결과를 각각  `models/model.hdf5`, `/outputs/output.png` 경로에 저장하고자 할때 다음과 같이 입력한다.  
+데이터셋이 `data/animals/` 경로에 저장되어 있고, 학습된 모델과 학습결과를 각각  `models/model.hdf5`, `/outputs/output.png` 경로에 저장하고자 할때 다음과 같이 입력한다.  
 ```
-$ python 03_train.py -d data/animal -m models/model.hdf5 -o ouputs.png
+$ python 03_train.py -d data/animals -m models/model.hdf5 -o ouputs.png
 ```
 #### 모델 예측
 데이터셋에서 10장의 이미지를 랜덤 추출하여 분류 동작을 수행한다. 
@@ -130,9 +131,9 @@ arguments
   -m, --model   :   path to pre-trained model(weights). required
 ```
 예 시:
-데이터셋과 학습된 모델이 각각 `data/animal/`, `models/model.hdf5` 경로에 저장되어 있을 때 다음과 같이 입력한다.  
+데이터셋과 학습된 모델이 각각 `data/animals/`, `models/model.hdf5` 경로에 저장되어 있을 때 다음과 같이 입력한다.  
 ```
-$ python 04_predict.py -d data/animal -m models/model.hdf5
+$ python 04_predict.py -d data/animals -m models/model.hdf5
 ```
 
 ## 6. 개정이력(Release note)
