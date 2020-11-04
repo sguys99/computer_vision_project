@@ -91,7 +91,7 @@ $ pip install -r requirements.txt
 ## 5. 사용방법(Usage examle)
 [(목차로 이동)](#1-개-요abstract)  
 
-#### 데이터 준비
+- **데이터 준비**
 캐글(Kaggle) `Animal Image Dataset(Dog, Cat and Panda)` 데이터셋을 다운로드한다.[[download link]](https://www.kaggle.com/ashishsaxena2209/animal-image-datasetdog-cat-and-panda)  
 다운로드한 데이터는 `src/data/` 경로에 저장한다. 데이터셋 폴더 구조는 다음과 같이 설정한다.
 ```
@@ -102,10 +102,10 @@ $ pip install -r requirements.txt
               ├── dogs/
               └── panda/
 ```
-#### 데이터 전처리
+- **데이터 전처리**
 해당사항 없음(모델 학습 과정에서 진행)
 
-#### 모델 학습
+- **모델 학습**
 `mllib/conv/shallownet.py`에 정의된 CNN 모듈을 사용하여 모델을 구성하고 학습한다.
 ```
 사용법 : $ python 03_train.py [-d] [-m]
@@ -121,7 +121,7 @@ arguments
 ```
 $ python 03_train.py -d data/animals -m models/model.hdf5 -o ouputs.png
 ```
-#### 모델 예측
+- **모델 예측**
 데이터셋에서 10장의 이미지를 랜덤 추출하여 분류 동작을 수행한다. 
 ```
 사용법 : $ python 04_predict.py [-d] [-m] 
